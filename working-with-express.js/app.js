@@ -7,6 +7,7 @@ const adminRoutes = require("./routes/admin"); // Importing admin routes
 const shopRoutes = require("./routes/shop"); // Importing shop routes
 
 app.use(bodyParser.urlencoded({ extended: false })); // Middleware to parse URL-encoded bodies
+app.use(express.static(path.join(__dirname, "public"))); // Serving static files from the public directory
 
 app.use("/admin", adminRoutes);
 
