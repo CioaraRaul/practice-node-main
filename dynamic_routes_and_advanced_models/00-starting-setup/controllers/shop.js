@@ -22,7 +22,7 @@ exports.getIndex = (req, res, next) => {
 };
 
 exports.getCart = (req, res, next) => {
-  Cart.getCart((cart) => {
+  Cart.getProducts((cart) => {
     Product.fetchAll((products) => {
       const cartProducts = [];
       for (let product of products) {
